@@ -30,6 +30,7 @@
         <div style="visibility: hidden" id="go">
             <a href="NOTfirstlevel.html"><button id='start_button'>START</button></a>
         </div>
+        <p class="hidden-text">The full name is 2 first names, 4 last names, and a total of 8 words.</p>
         <!-- <div class="image">
             <img src="images/diogo1.png" alt="Diogo mustache">
         </div>     -->
@@ -40,8 +41,15 @@
     function validateName() { 
     var name = document.getElementById("name").value;
 
-    // This is the answer, enjoy :)
-    if (name == "José Diogo Marques da Silva Branco da Cunha") {
+    // These are all the acceptable answers, enjoy :)
+    var acceptable_answers = [
+        "José Diogo Marques da Silva Branco da Cunha",
+        "Jose Diogo Marques da Silva Branco da Cunha",
+        "José Diogo Marques Silva Branco Cunha",
+        "Jose Diogo Marques Silva Branco Cunha"
+    ]
+
+    if (acceptable_answers.indexOf(name) >= 0) {
         document.getElementById("go").style.visibility = "visible";
     } else {
         document.getElementById("name").value = "";

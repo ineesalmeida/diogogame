@@ -16,14 +16,41 @@
 <body>
     <div class="container">
         <h1>Level 5</h1>
-        <h2>A true treasure</h2>
         <div class="content">
             <h2>How much does a tissue dispenser cost?</h2>
             <a href=" https://www.youtube.com/watch?v=fN9fT5Ggo9E">Hint</a>
+
+            <div class="slidecontainer">
+                <input type="range" min="0" max="3000" value="0" class="slider" id="myRange">
+                <p>Value: <span id="demo"></span></p>
+            </div>
+
+            <div id="next_level" style="visibility: hidden;">
+                <p>Yey! The next leve is obvisouly <a href="https://www.youtube.com/watch?v=TzXXHVhGXTQ">/1499</a></p>
+            </div>
+
             <p class="hidden-text">You should already know that if there is no place to put an answer, use the web address bar</p>
         </div>
     </div>
 </body>
+
+<script>
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value; // Display the default slider value
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider.oninput = function() {
+        output.innerHTML = this.value / 100;
+    }
+    slider.onchange = function() {
+        if (this.value == 1499){
+            document.getElementById("next_level").style.visibility = "visible";
+        } else {
+            document.getElementById("next_level").value = "hidden";
+        }
+    }
+</script>
 
 <!-- Bootstrap Javascript -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
