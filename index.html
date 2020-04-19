@@ -43,13 +43,13 @@
 
     // These are all the acceptable answers, enjoy :)
     var acceptable_answers = [
-        "José Diogo Marques da Silva Branco da Cunha",
-        "Jose Diogo Marques da Silva Branco da Cunha",
-        "José Diogo Marques Silva Branco Cunha",
-        "Jose Diogo Marques Silva Branco Cunha"
+        "josé diogo marques da silva branco da cunha",
+        "jose diogo marques da silva branco da cunha",
+        "josé diogo marques silva branco cunha",
+        "jose diogo marques silva branco cunha"
     ]
 
-    if (acceptable_answers.indexOf(name) >= 0) {
+    if (acceptable_answers.indexOf(name.toLowerCase()) >= 0) {
         document.getElementById("go").style.visibility = "visible";
     } else {
         document.getElementById("name").value = "";
