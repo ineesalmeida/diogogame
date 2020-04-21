@@ -51,6 +51,20 @@
     };
 </script>
 
+<script>
+    document.body.style.backgroundImage = "url('images/diogos_bg8.png')";
+    document.body.style.backgroundSize = "cover";
+    number = 0;
+    window.setInterval(function(){  
+        number++;
+        document.body.style.backgroundImage = "url('images/diogos_bg" + number + ".png')";
+        if (number == 8){
+            number = 0;
+        }
+    }, 500);
+
+</script>
+
 <!-- So that users cannot go back -->
 <script>
     window.location.hash="no-back-button";

@@ -34,7 +34,7 @@
 
 </head>
 <body>
-    <img id="confetti" src="images/confetti.gif" alt="confetti" style="width: 110%; position: fixed; top: 0px; visibility: hidden">
+    <img id="confetti" src="images/confetti.gif" alt="confetti" style="opacity: 0.7; width: 110%; position: fixed; top: 0px; visibility: hidden">
     <div class="container" style="padding-bottom: 2%">
         <div class="row">
             <div class="col-md-6">
@@ -153,7 +153,7 @@
     var day_select = document.getElementById("day");
     
     document.getElementById('wrapper').addEventListener('change', function(event){
-        if (year_select.value == 1995){ // && month_select.value == "apr" && day_select.value == 26){
+        if (year_select.value == 1995 && month_select.value == "apr" && day_select.value == 26){
             document.getElementById("youwon").style.visibility = "visible";
             document.getElementById("confetti").style.visibility = "visible";
             document.getElementById("afterwin").style.display = "block";
