@@ -1,6 +1,15 @@
+body {
+  background-color: #9BBDE0;
+}
+
 .container {
-    padding: 10%;
-    height: 1vh;
+    margin-top: 100px;
+    padding: 5%;
+    height: 100%;
+    width: 70%;
+    background-color: white;
+    border-radius: 15px;
+    min-height: 500px;
 }
 
 .content {
@@ -19,7 +28,7 @@
     outline: none;
     text-decoration: none;
     color: white;
-    background-color: dodgerblue;
+    background-color: #9BBDE0;
     padding: 10px 30px;
     border-radius: 10px;
     font-size: 24px;
@@ -28,33 +37,86 @@
     box-shadow: 0 9px #999;
 }
 
-#start_button:hover {background-color: #3e8e41}
+#start_button:hover {background-color: dodgerblue}
 
 #start_button:active {
-  background-color: #3e8e41;
+  background-color: dodgerblue;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
 .hidden-text {
     color: #fafafa;
-    padding-top: 30px;
+    padding-top: 20px;
+}
+
+.hidden-blue {
+    color: #aac6e3;
 }
 
 .hidden-text a{
     color: #f8f8f8;
 }
 
+ul {
+  max-width: 80%;
+  padding-top: 10px;
+}
+
+li {
+  text-decoration: none;
+  background-color: #eee;
+  color: #333333;
+  padding: 2px 6px 2px 6px;
+  list-style-type: none;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+li:hover {
+  background-color: #ddd;
+}
+
+li a {
+  color: black;
+}
+
+li a:hover {
+  color: black;
+  text-decoration: none;
+}
+
 .artist-image {
-    width: 150px;
-    height: 150px;
-    overflow:hidden;
-    padding: 5px;
+    height: 130px;
+    width: 100%;
+    overflow: hidden;
     border-radius: 5px;
 }
+
 .artist-image img {
-    height: 110%;
+    height: 100%;
 }
+
+.animate{
+  position: fixed;
+}
+
+#failed_diogos_bottom {
+  height: 500px;
+  position: fixed;
+  top: 250px;
+}
+
+#failed_diogos_top {
+  height: 500px;
+  position: fixed;
+  top: 0px;
+}
+
+.animate{
+  position: fixed;
+}
+
 
 /* SLIDER */
 .slidecontainer {
@@ -86,15 +148,13 @@
     appearance: none;
     width: 25px; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
-    background: #4CAF50; /* Green background */
+    background: dodgerblue; /* Blue background */
     cursor: pointer; /* Cursor on hover */
   }
   
   .slider::-moz-range-thumb {
     width: 25px; /* Set a specific slider handle width */
     height: 25px; /* Slider handle height */
-    background: #4CAF50; /* Green background */
+    background: dodgerblue; /* Blue background */
     cursor: pointer; /* Cursor on hover */
   }
-
-/* DATE DROPDOWN */

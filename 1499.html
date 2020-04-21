@@ -20,10 +20,10 @@
         <div class="content">
             <h2>What was Diogo’s top 5 artists of 2020 on Spotify?</h2>
             <ul>
-                <li class="option" id="1"><a href="prettygoodmusic.html">Snarky Puppy, Vulfpeck, Kendrick Lamar, The Fearless Flyers, Jacob Collier</a></li>
-                <li class="option" id="2"><a href="goodvibes.html">Jacob Collier, Vulfpeck, Gorillaz, Snarky Puppy, Randy Newman</a></li>
-                <li class="option" id="3"><a href="damngoodmusic.html">Vulfpeck, Gorillaz, Vasco Vilhena, Jacob Collier, Randy Newman</a></li>
-                <li class="option" id="4"><a href="awesomesounds.html">Vulfpeck, Snarky Puppy, Jacob Collier, Kendrick Lamar, Vasco Vilhena</a></li>
+                <a class="option" href="prettygoodmusic.html" id="1"><li>Snarky Puppy, Vulfpeck, Kendrick Lamar, The Fearless Flyers, Jacob Collier</li></a>
+                <a class="option" href="goodvibes.html" id="2"><li>Jacob Collier, Vulfpeck, Gorillaz, Snarky Puppy, Randy Newman</li></a>
+                <a class="option" href="damngoodmusic.html" id="3"><li>Vulfpeck, Gorillaz, Vasco Vilhena, Jacob Collier, Randy Newman</li></a>
+                <a class="option" href="awesomesounds.html" id="4"><li>Vulfpeck, Snarky Puppy, Jacob Collier, Kendrick Lamar, Vasco Vilhena</li></a>
             </ul>
             <div class="row" id="option_1">
                 <div class="col-md-2 artist-image">
@@ -107,6 +107,9 @@
     $boxes.hide()
     $('.option').mouseover(function() {
         $boxes.hide().filter('#option_' + this.id).show();
+    });
+    $('.option').mouseout(function() {
+        $boxes.hide();
     });
 </script>
 
