@@ -10,6 +10,9 @@ body {
     background-color: white;
     border-radius: 15px;
     min-height: 500px;
+    -webkit-box-shadow: 8px 8px 15px 1px rgba(41,41,41,0.58);
+    -moz-box-shadow: 8px 8px 15px 1px rgba(41,41,41,0.58);
+    box-shadow: 8px 8px 15px 1px rgba(41,41,41,0.58);
 }
 
 .content {
