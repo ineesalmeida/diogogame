@@ -15,7 +15,7 @@
 </head>
 <body>
     <div class="container">
-        <div class="piece"><img src="images/c/c12.png" alt="piece" width="100%"></div>
+        <div class="piece"><img src="images/f/f12.png" alt="piece" width="100%"></div>
         <h1>Level 12</h1>
         <div class="content">
             <h3>Which 5 of these ingredients are part of Diogo’s family special dish?</h3>
@@ -60,8 +60,8 @@
                     <label for="ing12">Mayo</label>
                 </div>
             </div>
-            <div id="next_level" class="row" style="padding-top: 60px; visibility: hidden">
-                <h3>You got it! It's quite a delicious treat. Next level: <span style="color: dodgerblue">/level13</span></h3>
+            <div style="visibility: hidden; text-align: right;" id="nextlevel">
+                <a href="level13.html"><button id='start_button'>Next Level</button></a>
             </div>
         </div>
     </div>
@@ -83,7 +83,7 @@
                 }
             }
         }
-        document.getElementById("next_level").style.visibility = "visible";
+        document.getElementById("nextlevel").style.visibility = "visible";
     };
 </script>
 

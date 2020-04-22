@@ -34,21 +34,25 @@
 
 </head>
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0"></script>
+
     <img id="confetti" src="images/confetti.gif" alt="confetti" style="opacity: 0.7; width: 110%; position: fixed; top: 0px; visibility: hidden">
     <div class="container" style="padding-bottom: 2%">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-8">
                 <div class="content">
-                    <div class="piece"><img src="images/c/c25.png" alt="piece" width="100%"></div>
                     <h1>Final Level</h1>
                     <div style="padding-top: 30px">
-                        <label for="code">Enter the code:</label>
+                        <label for="code">Solve the puzzle:</label>
                         <input id="code" name="code" style="width: 60%">
-                        <a href="code.html" class="hidden-text">HINT</a>  
+                        <div style="text-align: right; display: inline-block" id="nextlevel">
+                            <a href="pieces.html" target="_blank"><button>Pieces</button></a>
+                        </div>
                     </div>    
                 </div>
             </div>
-            <div class="col-md-6" style="text-align: center;">
+            <div class="col-md-4" style="text-align: center;">
                 <h1 style="color: dodgerblue; font-size: 120pt">25</h1>
             </div>
         </div>
@@ -61,29 +65,9 @@
         </div>
     </div>
 
-    <div id="afterwin" class="container" style="display: none; margin-bottom: 100px">
-        <h1>Happy Birthday!</h1>
-        <br><br>
-        <p>Caro Diogo,</p>
-        <p>
-            Como qualquer outra pessoa importante, tens agora o teu domínio pessoal:
-        </p>
-        <div style="text-align: center; font-size: 20px;">
-            <p>diogo-cunha.com</p>
-        </div>
-        <p>
-            Podes aqui colocar o que bem te apetecer. 
-            Um currículo com muito estilo?
-            Um portfolio das tuas animaçōes e jogos?
-            Uma galeria das coisinhas artísticas que fazes?
-            Um site pornográfico?
-            O que quiseres :)
-        </p>
-        <p>
-            Boa sorte com descontos jovem a partir de agora.
-        </p>
-        <p>Com amor,</p>
-        <p>Inês</p>
+    <div class="afterwin container" style="display: none">
+        <h1>Add a comment for Diogo</h1>
+        <div class="fb-comments" data-href="https://diogo-cunha.com" data-numposts="10" data-width=""></div>
     </div>
 </body>
 
@@ -100,8 +84,12 @@
         if (acceptable_answers.indexOf(name.toLowerCase().trim()) >= 0) {
             document.getElementById("youwon").style.visibility = "visible";
             document.getElementById("confetti").style.visibility = "visible";
-            document.getElementById("afterwin").style.display = "block";
 
+            var afterwin_containers = document.getElementsByClassName("afterwin");
+            for (var i = 0; i < afterwin_containers.length; i++){
+                afterwin_containers[i].style.display = "block";
+            }
+            
             setTimeout(function(){
                 document.getElementById("arrow").style.visibility = "visible";
             }, 3000);

@@ -21,9 +21,36 @@
 </head>
 <body>
     <div class="container">
-        <h2>Just a few?</h2>
+        <h2>How many pieces?</h2>
+        <div class="slidecontainer">
+            <input type="range" min="1" max="50" value="1" class="slider" id="myRange">
+            <p>Value: <span id="demo"></span></p>
+        </div>
+
+        <div style="visibility: hidden; text-align: right" id="allpieces">
+            <a href="allpieces.html"><button id='start_button'>All pieces</button></a>
+        </div>
     </div>
 </body>
+
+<script>
+    var slider = document.getElementById("myRange");
+    var output = document.getElementById("demo");
+    output.innerHTML = slider.value; // Display the default slider value
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider.oninput = function() {
+        output.innerHTML = this.value;
+    }
+    slider.onchange = function() {
+        if (this.value == 25){
+            document.getElementById("allpieces").style.visibility = "visible";
+        } else {
+            document.getElementById("allpieces").value = "hidden";
+        }
+    }
+</script>
+    
 
 <!-- Bootstrap Javascript -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
