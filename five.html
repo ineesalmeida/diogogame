@@ -44,7 +44,7 @@
                     <label for="ing6">Kitesurfing</label>
                     <br>
                     <input type="checkbox" id="ing7" name="ing7" value="ing7" onclick="validate()">
-                    <label for="ing7">Skimming</label>
+                    <label for="ing7">Chess</label>
                     <br>
                     <input type="checkbox" id="ing8" name="ing8" value="ing8" onclick="validate()">
                     <label for="ing8">Rope climbing</label>
@@ -80,9 +80,16 @@
     function validate() { 
         var inputs = document.getElementsByTagName('input');
         var valid = true;
+        var incorrect_ings = ["ing7"]
         for(var x = 0; x < inputs.length; x++) {
-            if (!inputs[x].checked) {
-                return;
+            if (incorrect_ings.indexOf(inputs[x].name) >= 0) {
+                if (inputs[x].checked) {
+                    return;
+                }
+            } else {
+                if (!inputs[x].checked) {
+                    return;
+                }
             }
         }
         document.getElementById("nextlevel").style.visibility = "visible";
