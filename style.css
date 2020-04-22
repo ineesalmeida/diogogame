@@ -86,15 +86,20 @@ li a:hover {
   text-decoration: none;
 }
 
+.options {
+  text-align: center;
+  margin-top: 30px;
+}
+
 .artist-image {
-    height: 130px;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 5px;
+    width: 120px;
+    height: 120px;
+    display: inline-block;
 }
 
 .artist-image img {
     height: 100%;
+    border-radius: 10px;
 }
 
 .animate{
@@ -117,6 +122,28 @@ li a:hover {
   position: fixed;
 }
 
+.image_choice {
+  height: 150px;
+  width: 150px;
+  border-radius: 10px;
+  opacity: 0.8;
+  margin: 10px;
+}
+
+.image_choice:hover {
+  opacity: 1;
+}
+
+.piece {
+  width: 40px; 
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: top;
+}
+
+h1:first-of-type {
+  display: inline-block;
+}
 
 /* SLIDER */
 .slidecontainer {

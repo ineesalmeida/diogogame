@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Level 5</title>
+    <title>Level 19</title>
 
     <!-- Bootstrap Style -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -15,40 +15,18 @@
 </head>
 <body>
     <div class="container">
-        <h1>Level 5</h1>
+        <div class="piece"><img src="images/c/c19.png" alt="piece" width="100%"></div>
+        <h1>Level 19</h1>
         <div class="content">
-            <h2>How much does a tissue dispenser cost?</h2>
-            <a href=" https://www.youtube.com/watch?v=fN9fT5Ggo9E" target="_blank">Hint</a>
-
-            <div class="slidecontainer">
-                <input type="range" min="0" max="3000" value="0" class="slider" id="myRange">
-                <p>Value: <span id="demo"></span></p>
-            </div>
-
-            <div id="next_level" style="visibility: hidden;">
-                <p>Yey! The next leve is obvisouly <a href="https://www.youtube.com/watch?v=TzXXHVhGXTQ" target="_blank">/1499</a></p>
-            </div>
-
-            <p class="hidden-text">You should already know that if there is no place to put an answer, use the web address bar</p>
+            <h2>What instrument from the family of metals does Diogo own and play?</h2>
+            <p class="hidden-text">He can play this <a href="https://www.youtube.com/watch?v=izGwDsrQ1eQ" target="_blank">song</a> </p>
         </div>
     </div>
 </body>
 
 <script>
-    var slider = document.getElementById("myRange");
-    var output = document.getElementById("demo");
-    output.innerHTML = slider.value; // Display the default slider value
-
-    // Update the current slider value (each time you drag the slider handle)
-    slider.oninput = function() {
-        output.innerHTML = this.value / 100;
-    }
-    slider.onchange = function() {
-        if (this.value == 1499){
-            document.getElementById("next_level").style.visibility = "visible";
-        } else {
-            document.getElementById("next_level").value = "hidden";
-        }
+    function showInstrument() {
+        document.getElementById('hint').style.visibility = "visible";
     }
 </script>
 

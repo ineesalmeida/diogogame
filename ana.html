@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Level 12</title>
+    <title>Level 17</title>
 
     <!-- Bootstrap Style -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -15,19 +15,78 @@
 </head>
 <body>
     <div class="container">
-        <h1>Level 12</h1>
-        <h3>It was a sad day for Diogo :'(</h3>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="piece"><img src="images/c/c17.png" alt="piece" width="100%"></div>
+                <h1>Level 17</h1>     
+            </div>   
+            <div class="col-md-2">
+                <div id="hint" style="visibility: hidden;">
+                    <img src="images/aussie.jpg" alt="tim" width="100%">
+                </div>
+            </div>
+        </div>
+        
         <div class="content">
-            <h2>Before going to University, Diogo went on another adventure. What was it?</h2>
-            <ul>
-                <a href="airforce.html"><li>The Portuguese Air Force</li></a>
-                <a href="teaching.html"><li>Taught windsurfing in his home town</li></a>
-                <a href="volunteering.html"><li>Volunteering in India</li></a>
-                <a href="navy.html"><li>He joined the navy</li></a>
-            </ul>
+            <h2>Name of Diogo’s favourit Austrial comedian/musician?</h2>
+            
+            <label for="name">Name:</label>
+            <input id="name" name="name" style="width: 60%">
+
+            <a href="#" class="hidden-text" onclick='showInstrument()'>HINT</a>
+
+        </div>
+        <div class="content" id="nextsection" style="visibility: hidden;">
+            <h2>What illness did Sam's mum had, before God fixed it?</h2>
+
+            <label for="illness">Illness:</label>
+            <input id="illness" name="illness" style="width: 60%">
+
+            <a class="hidden-text" href="https://www.youtube.com/watch?v=IZeWPScnolo">HINT</a>
+        </div>
+
+        <div id="nextlevel" style="visibility: hidden; padding-top: 20px; text-align: center">
+            <p>Next level: /gettingthere</p>
         </div>
     </div>
 </body>
+
+<script>
+    function showInstrument() {
+        document.getElementById('hint').style.visibility = "visible";
+    }
+</script>
+
+<script>
+    document.getElementById("name").onkeyup = function() { 
+        var name = document.getElementById("name").value
+
+        // These are all the acceptable answers, enjoy :)
+        var acceptable_answers = [
+            "tim minchin",
+            "minchin",
+        ]
+
+        if (acceptable_answers.indexOf(name.toLowerCase()) >= 0) {
+            document.getElementById("nextsection").style.visibility = "visible";
+        }
+    };
+</script>
+
+<script>
+    document.getElementById("illness").onkeyup = function() { 
+        var name = document.getElementById("illness").value
+
+        // These are all the acceptable answers, enjoy :)
+        var acceptable_answers = [
+            "cataracts",
+        ]
+
+        if (acceptable_answers.indexOf(name.toLowerCase()) >= 0) {
+            document.getElementById("nextlevel").style.visibility = "visible";
+        }
+    };
+</script>
 
 <!-- Bootstrap Javascript -->
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
