@@ -5,4 +5,4 @@ window.onhashchange=function(){window.location.hash="no-back-button";}
 
 setTimeout(function(){
     window.location.href = 'index.html';
-}, 4000);
+}, 5000);
